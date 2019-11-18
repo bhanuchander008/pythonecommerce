@@ -1,0 +1,171 @@
+version: 1
+disable_existing_loggers: False
+formatters:
+ simple:
+   format: '%(asctime)s - %(name)s - %(levelname)s - %(message)s'
+handlers:
+ role:
+   class: logging.FileHandler
+   level: DEBUG
+   formatter: simple
+   filename: loggerfiles/roles.log
+
+ employees:
+   class: logging.FileHandler
+   level: DEBUG
+   formatter: simple
+   filename: loggerfiles/staff.log
+
+ user:
+   class: logging.FileHandler
+   level: DEBUG
+   formatter: simple
+   filename: loggerfiles/users.log
+
+ categories:
+   class: logging.FileHandler
+   level: DEBUG
+   formatter: simple
+   filename: loggerfiles/category.log
+
+ orders:
+   class: logging.FileHandler
+   level: DEBUG
+   formatter: simple
+   filename: loggerfiles/order.log
+
+ product_images:
+   class: logging.FileHandler
+   level: DEBUG
+   formatter: simple
+   filename: loggerfiles/product_image.log
+
+ sub_categories:
+   class: logging.FileHandler
+   level: DEBUG
+   formatter: simple
+   filename: loggerfiles/sub_category.log
+
+ pro_class:
+   class: logging.FileHandler
+   level: DEBUG
+   formatter: simple
+   filename: loggerfiles/product_class.log
+
+ products:
+   class: logging.FileHandler
+   level: DEBUG
+   formatter: simple
+   filename: loggerfiles/products.log
+
+ sizes:
+   class: logging.FileHandler
+   level: DEBUG
+   formatter: simple
+   filename: loggerfiles/sizes.log
+
+ colours:
+   class: logging.FileHandler
+   level: DEBUG
+   formatter: simple
+   filename: loggerfiles/colour.log
+
+ addcart:
+   class: logging.FileHandler
+   level: DEBUG
+   formatter: simple
+   filename: loggerfiles/cart.log
+
+ billinginfo:
+   class: logging.FileHandler
+   level: DEBUG
+   formatter: simple
+   filename: loggerfiles/billing.log
+
+ bannerimages:
+   class: logging.FileHandler
+   level: DEBUG
+   formatter: simple
+   filename: loggerfiles/bannerimage.log
+
+ permission:
+   class: logging.FileHandler
+   level: DEBUG
+   formatter: simple
+   filename: loggerfiles/permission.log
+
+loggers:
+ roles:
+   level: DEBUG
+   handlers: [role]
+   propagate: True
+
+ staff:
+   level: DEBUG
+   handlers: [employees]
+   propagate: True
+
+ users:
+   level: DEBUG
+   handlers: [user]
+   propagate: True
+
+ category:
+   level: DEBUG
+   handlers: [categories]
+   propagate: True
+
+ order:
+   level: DEBUG
+   handlers: [orders]
+   propagate: True
+
+ product_image:
+   level: DEBUG
+   handlers: [product_images]
+   propagate: True
+
+ sub_category:
+   level: DEBUG
+   handlers: [sub_categories]
+   propagate: True
+
+ product_class:
+   level: DEBUG
+   handlers: [pro_class]
+   propagate: True
+
+ product:
+   level: DEBUG
+   handlers: [products]
+   propagate: True
+
+ size:
+   level: DEBUG
+   handlers: [sizes]
+   propagate: True
+
+ colour:
+   level: DEBUG
+   handlers: [colours]
+   propagate: True
+
+ cart:
+    level: DEBUG
+    handlers: [addcart]
+    propagate: True
+
+ billing:
+   level: DEBUG
+   handlers: [billinginfo]
+   propagate: True
+
+ banner_image:
+   level: DEBUG
+   handlers: [bannerimages]
+   propagate: True
+
+ permissions:
+   level: DEBUG
+   handlers: [permission]
+   propagate: True 
